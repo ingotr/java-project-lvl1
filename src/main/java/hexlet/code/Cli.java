@@ -11,4 +11,11 @@ public class Cli {
         System.out.println("Hello, " + userName + "!");
         return userName;
     }
+
+    public static String getUserInput() {
+        Scanner scanner = new Scanner(System.in);
+        String userInput = scanner.nextLine().trim();
+        System.out.format("Your answer: %s%n", userInput);
+        return userInput;
+    }
 }

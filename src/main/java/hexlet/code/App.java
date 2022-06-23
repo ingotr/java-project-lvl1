@@ -10,6 +10,7 @@ public class App {
                 Please enter the game number and press Enter.
                 1 - Greet
                 2 - Even
+                3 - Calc
                 0 - Exit
                 """;
         String userChoice;
@@ -27,6 +28,7 @@ public class App {
             case "0" -> System.out.println("Thank you. See you again");
             case "1" -> parseGreet();
             case "2" -> Even.play();
+            case "3" -> Calculator.play();
             default -> System.out.println("Неизвестный пункт меню. Попробуйте выбрать еще раз");
         }
     }

@@ -9,6 +9,7 @@ public class App {
         String menuItems = """
                 Please enter the game number and press Enter.
                 1 - Greet
+                2 - Even
                 0 - Exit
                 """;
         String userChoice;
@@ -25,6 +26,7 @@ public class App {
         switch (userChoice) {
             case "0" -> System.out.println("Thank you. See you again");
             case "1" -> parseGreet();
+            case "2" -> Even.play();
             default -> System.out.println("Неизвестный пункт меню. Попробуйте выбрать еще раз");
         }
     }

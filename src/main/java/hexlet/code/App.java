@@ -1,11 +1,15 @@
 package hexlet.code;
 
+import hexlet.code.games.Calculator;
+import hexlet.code.games.Even;
+
 import java.util.Scanner;
 
 public class App {
     private static final Scanner SCANNER = new Scanner(System.in);
 
     public static void main(String[] args) {
+        Engine engine = new Engine();
         String menuItems = """
                 Please enter the game number and press Enter.
                 1 - Greet
@@ -18,17 +22,17 @@ public class App {
         do {
             System.out.println(menuItems);
             userChoice = SCANNER.nextLine();
-            parseUserChoice(userChoice);
+            parseUserChoice(userChoice, engine);
         } while (!userChoice.equals("0"));
 
     }
 
-    private static void parseUserChoice(String userChoice) {
+    private static void parseUserChoice(String userChoice, Engine engine) {
         switch (userChoice) {
             case "0" -> System.out.println("Thank you. See you again");
             case "1" -> parseGreet();
-            case "2" -> Even.play();
-            case "3" -> Calculator.play();
+            case "2" -> engine.play(new Even());
+            case "3" -> engine.play(new Calculator());
             default -> System.out.println("Неизвестный пункт меню. Попробуйте выбрать еще раз");
         }
     }

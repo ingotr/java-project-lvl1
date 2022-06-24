@@ -6,3 +6,5 @@
 https://asciinema.org/a/503752
 2) Демо игры: "Калькулятор"
 https://asciinema.org/a/503849
+3) Демо игры "наибольший общий делитель (НОД)"
+https://asciinema.org/a/504085

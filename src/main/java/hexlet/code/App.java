@@ -3,6 +3,7 @@ package hexlet.code;
 import hexlet.code.games.Calculator;
 import hexlet.code.games.Even;
 import hexlet.code.games.GCD;
+import hexlet.code.games.Progression;
 
 import java.util.Scanner;
 
@@ -17,6 +18,7 @@ public class App {
                 2 - Even
                 3 - Calc
                 4 - GCD
+                5 - Progression
                 0 - Exit
                 """;
         String userChoice;
@@ -36,6 +38,7 @@ public class App {
             case "2" -> engine.play(new Even());
             case "3" -> engine.play(new Calculator());
             case "4" -> engine.play(new GCD());
+            case "5" -> engine.play(new Progression());
             default -> System.out.println("Неизвестный пункт меню. Попробуйте выбрать еще раз");
         }
     }

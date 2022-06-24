@@ -4,9 +4,10 @@ import hexlet.code.Cli;
 
 import java.util.Random;
 
+import static hexlet.code.Engine.getMaxNum;
+
 public class Calculator extends Game {
 
-    public static final int MAX_NUM = 100;
     public static final int MATH_OPERATORS_COUNT = 3;
 
     public Calculator() {
@@ -30,10 +31,10 @@ public class Calculator extends Game {
 
     private static int getCorrectAnswer() {
         Random random = new Random();
-        int firstNumber = random.nextInt(MAX_NUM) + 1;
-        int secondNumber = random.nextInt(MAX_NUM) + 1;
+        int firstNumber = random.nextInt(getMaxNum()) + 1;
+        int secondNumber = random.nextInt(getMaxNum()) + 1;
         String mathSign = getMathSign();
-        System.out.format("Question: %d %s % d%n", firstNumber, mathSign, secondNumber);
+        System.out.format("Question: %d %s %d%n", firstNumber, mathSign, secondNumber);
 
         return switch (mathSign) {
             case "+" -> firstNumber + secondNumber;

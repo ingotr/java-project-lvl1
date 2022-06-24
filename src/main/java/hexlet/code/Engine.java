@@ -4,6 +4,8 @@ import hexlet.code.games.Game;
 
 public class Engine {
     private static final int MAX_GAME_COUNT = 3;
+    private static final int MAX_NUM = 100;
+
     private Game currentGame;
 
     public void play(Game currentGame) {
@@ -26,5 +28,9 @@ public class Engine {
 
     private void setCurrentGame(Game currentGame) {
         this.currentGame = currentGame;
+    }
+
+    public static int getMaxNum() {
+        return MAX_NUM;
     }
 }

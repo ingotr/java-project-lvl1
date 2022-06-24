@@ -3,9 +3,10 @@ package hexlet.code.games;
 import hexlet.code.Cli;
 
 import java.util.Random;
-public class Even extends Game {
 
-    public static final int MAX_NUM = 100;
+import static hexlet.code.Engine.getMaxNum;
+
+public class Even extends Game {
 
     public Even() {
         this.setWelcomeText("Answer 'yes' if number even otherwise answer 'no'.");
@@ -28,7 +29,7 @@ public class Even extends Game {
 
     private static String getCorrectAnswer() {
         Random random = new Random();
-        int number = random.nextInt(MAX_NUM) + 1;
+        int number = random.nextInt(getMaxNum()) + 1;
         System.out.format("Question: %d%n", number);
         return isNumberEven(number);
     }

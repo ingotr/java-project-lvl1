@@ -1,7 +1,5 @@
 package hexlet.code.games;
 
-import hexlet.code.Cli;
-
 import java.util.Random;
 
 import static hexlet.code.Engine.getMaxNum;
@@ -12,22 +10,7 @@ public class GCD extends Game {
         this.setWelcomeText("Find the greatest common divisor of given numbers.");
     }
 
-    @Override
-    public boolean runGameCycle(String userName) {
-        String correctAnswer = getCorrectAnswer();
-        String userInput = Cli.getUserInput();
-        boolean isAnswerCorrect = userInput.equals(correctAnswer);
-        if (isAnswerCorrect) {
-            System.out.println("Correct!");
-        } else {
-            System.out.format("%s is wrong answer ;(. Correct answer was %s. Let's try again, %s!%n",
-                    userInput, correctAnswer, userName);
-            return true;
-        }
-        return false;
-    }
-
-    private static String getCorrectAnswer() {
+    public String getCorrectAnswer() {
         Random random = new Random();
         int firstNumber = random.nextInt(getMaxNum()) + 1;
         int secondNumber = random.nextInt(getMaxNum()) + 1;

@@ -3,7 +3,7 @@ package hexlet.code.games;
 public abstract class Game {
     private String welcomeText;
 
-    public abstract boolean runGameCycle(String userName);
+    public abstract String getCorrectAnswer();
 
     public String getWelcomeText() {
         return welcomeText;

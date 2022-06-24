@@ -1,7 +1,5 @@
 package hexlet.code.games;
 
-import hexlet.code.Cli;
-
 import java.util.Random;
 
 import static hexlet.code.Engine.getMaxNum;
@@ -14,34 +12,20 @@ public class Calculator extends Game {
         this.setWelcomeText("What is the result of the expression?");
     }
 
-    @Override
-    public boolean runGameCycle(String userName) {
-        int correctAnswer = getCorrectAnswer();
-        int userInput = Integer.parseInt(Cli.getUserInput());
-        boolean isAnswerCorrect = (userInput == correctAnswer);
-        if (isAnswerCorrect) {
-            System.out.println("Correct!");
-        } else {
-            System.out.format("%s is wrong answer ;(. Correct answer was %s. Let's try again, %s!%n",
-                    userInput, correctAnswer, userName);
-            return true;
-        }
-        return false;
-    }
-
-    private static int getCorrectAnswer() {
+    public String getCorrectAnswer() {
         Random random = new Random();
         int firstNumber = random.nextInt(getMaxNum()) + 1;
         int secondNumber = random.nextInt(getMaxNum()) + 1;
         String mathSign = getMathSign();
         System.out.format("Question: %d %s %d%n", firstNumber, mathSign, secondNumber);
 
-        return switch (mathSign) {
+        int result =  switch (mathSign) {
             case "+" -> firstNumber + secondNumber;
             case "-" -> firstNumber - secondNumber;
             case "*" -> firstNumber * secondNumber;
             default -> throw new IllegalStateException("Unexpected math operator: " + mathSign);
         };
+        return String.valueOf(result);
     }
 
     private static String getMathSign() {

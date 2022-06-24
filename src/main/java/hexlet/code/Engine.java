@@ -18,12 +18,26 @@ public class Engine {
         int gameCount = 0;
         String userName = Cli.greetUser();
         do {
-            if (currentGame.runGameCycle(userName)) {
+            if (runGameCycle(userName)) {
                 break;
             }
             gameCount++;
         } while (gameCount < MAX_GAME_COUNT);
         System.out.format("Congratulations, %s!%n", userName);
+    }
+
+    private boolean runGameCycle(String userName) {
+        String correctAnswer = currentGame.getCorrectAnswer();
+        String userInput = Cli.getUserInput();
+        boolean isAnswerCorrect = userInput.equals(correctAnswer);
+        if (isAnswerCorrect) {
+            System.out.println("Correct!");
+        } else {
+            System.out.format("%s is wrong answer ;(. Correct answer was %s. Let's try again, %s!%n",
+                    userInput, correctAnswer, userName);
+            return true;
+        }
+        return false;
     }
 
     private void setCurrentGame(Game currentGame) {

@@ -8,3 +8,5 @@ https://asciinema.org/a/503752
 https://asciinema.org/a/503849
 3) Демо игры "наибольший общий делитель (НОД)"
 https://asciinema.org/a/504085
+4) Демо игры "Арифметическая прогрессия"
+https://asciinema.org/a/504092

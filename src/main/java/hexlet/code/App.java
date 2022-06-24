@@ -2,6 +2,7 @@ package hexlet.code;
 
 import hexlet.code.games.Calculator;
 import hexlet.code.games.Even;
+import hexlet.code.games.GCD;
 
 import java.util.Scanner;
 
@@ -15,6 +16,7 @@ public class App {
                 1 - Greet
                 2 - Even
                 3 - Calc
+                4 - GCD
                 0 - Exit
                 """;
         String userChoice;
@@ -33,6 +35,7 @@ public class App {
             case "1" -> parseGreet();
             case "2" -> engine.play(new Even());
             case "3" -> engine.play(new Calculator());
+            case "4" -> engine.play(new GCD());
             default -> System.out.println("Неизвестный пункт меню. Попробуйте выбрать еще раз");
         }
     }

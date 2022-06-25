@@ -12,7 +12,7 @@ public class Calculator extends Game {
         this.setWelcomeText("What is the result of the expression?");
     }
 
-    public String getCorrectAnswer() {
+    public final String getCorrectAnswer() {
         Random random = new Random();
         int firstNumber = random.nextInt(getMaxNum()) + 1;
         int secondNumber = random.nextInt(getMaxNum()) + 1;

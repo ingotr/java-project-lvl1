@@ -11,7 +11,7 @@ public class Prime extends Game {
     }
 
     @Override
-    public String getCorrectAnswer() {
+    public final String getCorrectAnswer() {
         Random random = new Random();
         int number = random.nextInt(getMaxNum()) + 1;
         System.out.format("Question: %d%n", number);

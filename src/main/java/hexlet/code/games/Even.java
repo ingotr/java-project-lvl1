@@ -10,7 +10,7 @@ public class Even extends Game {
         this.setWelcomeText("Answer 'yes' if number even otherwise answer 'no'.");
     }
 
-    public String getCorrectAnswer() {
+    public final String getCorrectAnswer() {
         Random random = new Random();
         int number = random.nextInt(getMaxNum()) + 1;
         System.out.format("Question: %d%n", number);

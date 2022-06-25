@@ -5,11 +5,11 @@ public abstract class Game {
 
     public abstract String getCorrectAnswer();
 
-    public String getWelcomeText() {
+    public final String getWelcomeText() {
         return welcomeText;
     }
 
-    public void setWelcomeText(String welcomeText) {
-        this.welcomeText = welcomeText;
+    public final void setWelcomeText(String text) {
+        this.welcomeText = text;
     }
 }

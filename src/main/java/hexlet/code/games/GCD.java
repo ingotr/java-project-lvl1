@@ -10,7 +10,7 @@ public class GCD extends Game {
         this.setWelcomeText("Find the greatest common divisor of given numbers.");
     }
 
-    public String getCorrectAnswer() {
+    public final String getCorrectAnswer() {
         Random random = new Random();
         int firstNumber = random.nextInt(getMaxNum()) + 1;
         int secondNumber = random.nextInt(getMaxNum()) + 1;

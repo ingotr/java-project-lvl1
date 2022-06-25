@@ -2,14 +2,14 @@ package hexlet.code;
 
 import hexlet.code.games.Game;
 
-public class Engine {
+public final class Engine {
     private static final int MAX_GAME_COUNT = 3;
     private static final int MAX_NUM = 100;
 
     private Game currentGame;
 
-    public void play(Game currentGame) {
-        setCurrentGame(currentGame);
+    public void play(Game game) {
+        setCurrentGame(game);
         System.out.println(currentGame.getWelcomeText());
         runGameplay();
     }
@@ -40,8 +40,8 @@ public class Engine {
         return false;
     }
 
-    private void setCurrentGame(Game currentGame) {
-        this.currentGame = currentGame;
+    public void setCurrentGame(Game game) {
+        this.currentGame = game;
     }
 
     public static int getMaxNum() {

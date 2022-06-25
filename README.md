@@ -10,3 +10,5 @@ https://asciinema.org/a/503849
 https://asciinema.org/a/504085
 4) Демо игры "Арифметическая прогрессия"
 https://asciinema.org/a/504092
+5) Демо игры "Простое ли число?"
+https://asciinema.org/a/504164

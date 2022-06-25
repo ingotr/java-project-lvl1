@@ -1,9 +1,6 @@
 package hexlet.code;
 
-import hexlet.code.games.Calculator;
-import hexlet.code.games.Even;
-import hexlet.code.games.GCD;
-import hexlet.code.games.Progression;
+import hexlet.code.games.*;
 
 import java.util.Scanner;
 
@@ -19,6 +16,7 @@ public class App {
                 3 - Calc
                 4 - GCD
                 5 - Progression
+                6 - Prime
                 0 - Exit
                 """;
         String userChoice;
@@ -39,6 +37,7 @@ public class App {
             case "3" -> engine.play(new Calculator());
             case "4" -> engine.play(new GCD());
             case "5" -> engine.play(new Progression());
+            case "6" -> engine.play(new Prime());
             default -> System.out.println("Неизвестный пункт меню. Попробуйте выбрать еще раз");
         }
     }

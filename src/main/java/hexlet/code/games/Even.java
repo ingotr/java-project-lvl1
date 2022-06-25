@@ -17,7 +17,7 @@ public class Even extends Game {
         return isNumberEven(number);
     }
 
-    public static String isNumberEven(int number) {
+    private static String isNumberEven(int number) {
         return number % 2 == 0 ? "yes" : "no";
     }
 }

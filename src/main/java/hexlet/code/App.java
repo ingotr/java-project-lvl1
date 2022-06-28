@@ -25,12 +25,9 @@ public class App {
                 """;
         String userChoice;
 
-        do {
-            System.out.println(menuItems);
-            userChoice = SCANNER.nextLine();
-            parseUserChoice(userChoice, engine);
-        } while (!userChoice.equals("0"));
-
+        System.out.println(menuItems);
+        userChoice = SCANNER.nextLine();
+        parseUserChoice(userChoice, engine);
     }
 
     private static void parseUserChoice(String userChoice, Engine engine) {

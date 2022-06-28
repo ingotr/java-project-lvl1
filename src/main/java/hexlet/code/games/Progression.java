@@ -35,7 +35,7 @@ public class Progression extends Game {
         progression[numOfHidden] = hiddenReplacement;
 
         String progressionString = Arrays.toString(progression);
-        for (String s : Arrays.asList("[", "]")) {
+        for (String s : Arrays.asList("[", "]", ",")) {
             progressionString = progressionString.replace(s, "");
         }
 
